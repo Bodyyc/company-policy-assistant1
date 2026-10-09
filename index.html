@@ -7,8 +7,6 @@
 <style>
 body{margin:0;background:#f3f0e8;color:#1c1915;font:18px/1.5 Georgia,sans-serif}
 main{max-width:920px;margin:0 auto;padding:32px 16px 64px}
-table{width:100%;border-collapse:collapse;background:#faf8f3;font-size:15px}
-th,td{border-bottom:1px solid #e0d9cc;text-align:left;padding:8px;vertical-align:top}
 button,textarea{font:inherit}
 button{background:#1e3a34;color:#f4f1ea;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
 textarea{width:100%;box-sizing:border-box;min-height:72px;border:1px solid #e0d9cc;border-radius:8px;padding:8px;background:#faf8f3}
@@ -23,29 +21,6 @@ textarea{width:100%;box-sizing:border-box;min-height:72px;border:1px solid #e0d9
 <textarea id="q">How many vacation days do employees get, and can unused days roll over?</textarea>
 <p><button id="go">Compare approaches</button></p>
 <div id="out"></div>
-<h2>Table 1. What each approach is allowed to see</h2>
-<table>
-<tr><th>Approach</th><th>Input</th><th>Tokens</th><th>Unsupported answers</th><th>Typical failure</th></tr>
-<tr><td>Rules-based search</td><td>Title phrase rules only</td><td>0</td><td>Low, because it quotes or abstains</td><td>Misses a paraphrase, or ties and abstains</td></tr>
-<tr><td>LLM, no vector index</td><td>Question only</td><td>Prompt plus completion, no policy text</td><td>High when it invents a rule</td><td>States figures and policy ids the database does not have</td></tr>
-<tr><td>LLM with vector index</td><td>Top TF-IDF excerpts only</td><td>Higher, because excerpts are in the prompt</td><td>Low when it follows the excerpts</td><td>Weak retrieval can still leave it with the wrong excerpt</td></tr>
-</table>
-<h2>Table 2. Four-question check</h2>
-<table>
-<tr><th>Question</th><th>Approach</th><th>Policy</th><th>Time</th><th>Tokens</th><th>Unsupported</th></tr>
-<tr><td>Vacation days</td><td>Rules</td><td>HR-VACATION</td><td>1 ms</td><td>0</td><td>0</td></tr>
-<tr><td>Vacation days</td><td>LLM, no index</td><td>none</td><td>9612 ms</td><td>1199</td><td>25</td></tr>
-<tr><td>Vacation days</td><td>LLM with index</td><td>HR-VACATION</td><td>2667 ms</td><td>883</td><td>0</td></tr>
-<tr><td>Remote days</td><td>Rules</td><td>REM-REMOTE-WORK</td><td>1 ms</td><td>0</td><td>0</td></tr>
-<tr><td>Remote days</td><td>LLM, no index</td><td>none</td><td>4401 ms</td><td>1004</td><td>0, abstained</td></tr>
-<tr><td>Remote days</td><td>LLM with index</td><td>REM-REMOTE-WORK</td><td>2472 ms</td><td>916</td><td>0</td></tr>
-<tr><td>Expenses over $500</td><td>Rules</td><td>FIN-EXPENSE-APPROVAL</td><td>1 ms</td><td>0</td><td>0</td></tr>
-<tr><td>Expenses over $500</td><td>LLM, no index</td><td>none</td><td>4828 ms</td><td>919</td><td>45</td></tr>
-<tr><td>Expenses over $500</td><td>LLM with index</td><td>FIN-EXPENSE-APPROVAL</td><td>3462 ms</td><td>943</td><td>0</td></tr>
-<tr><td>Pension percentage</td><td>Rules</td><td>none</td><td>1 ms</td><td>0</td><td>0, abstained</td></tr>
-<tr><td>Pension percentage</td><td>LLM, no index</td><td>none</td><td>6958 ms</td><td>1154</td><td>57</td></tr>
-<tr><td>Pension percentage</td><td>LLM with index</td><td>none</td><td>2519 ms</td><td>827</td><td>0, abstained</td></tr>
-</table>
 </main>
 <script>
 const recorded={
