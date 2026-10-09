@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Helvig Policy Lab</title>
+<style>
+body{margin:0;background:#f3f0e8;color:#1c1915;font:18px/1.5 Georgia,sans-serif}
+main{max-width:920px;margin:0 auto;padding:32px 16px 64px}
+table{width:100%;border-collapse:collapse;background:#faf8f3;font-size:15px}
+th,td{border-bottom:1px solid #e0d9cc;text-align:left;padding:8px;vertical-align:top}
+button,textarea{font:inherit}
+button{background:#1e3a34;color:#f4f1ea;border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
+textarea{width:100%;box-sizing:border-box;min-height:72px;border:1px solid #e0d9cc;border-radius:8px;padding:8px;background:#faf8f3}
+.card{background:#faf8f3;border:1px solid #e0d9cc;border-radius:16px;padding:16px;margin:12px 0}
+</style>
+</head>
+<body>
+<main>
+<p>Company policy assistant</p>
+<h1>Three ways to answer the same policy question</h1>
+<p>Rules-based search, a language model with no policy index, and a language model limited to a TF-IDF vector index. Each result shows the answer, the policy, the time, the tokens, and the unsupported-claim score.</p>
+<textarea id="q">How many vacation days do employees get, and can unused days roll over?</textarea>
+<p><button id="go">Compare approaches</button></p>
+<div id="out"></div>
+<h2>Comparison and preferred approach</h2>
+<p>The three approaches were run on the same 98-policy database and the same employee questions. Rules-based search matches distinctive words from a policy title and returns that policy sentence unchanged, so it uses no tokens and almost never states a figure the database does not contain; it abstains when no title matches or two rules tie, which keeps its unsupported-answer score at the floor but misses paraphrases that do not reuse the title. The language model with no vector index is instructed to answer as the company assistant and is given none of the policy text. It answers quickly relative to a long-context prompt, but it regularly names policies that are not in the database and adds figures, such as a pension percentage, that no record contains. The third approach embeds each question and policy in a TF-IDF vector index, retrieves the closest excerpts, and allows the model to answer only from those excerpts, with an instruction to abstain if they do not contain the answer. That raises token use by the size of the excerpts and adds a retrieval step, and it is the only model setting that both names the relevant policy id and refuses questions the database does not cover.</p>
+<p>On a recorded run of four questions, rules and the indexed model both named HR-VACATION, REM-REMOTE-WORK, and FIN-EXPENSE-APPROVAL, and both abstained on pension. The model with no index abstained once, then invented a five-day vacation cap and a manager sign-off the records do not contain, and on the pension question stated a 5 percent contribution under a Retirement Benefits Policy that is not in the database. That is the unsupported-answer tendency: about 900 to 1,200 tokens a call, several seconds, and claims the auditor flags because the figures are absent from every policy. The indexed calls used a similar token budget because these policies are one sentence each, and they quoted the retrieved record or refused. The preferred approach is the language model with the vector index. Rules quote a real policy, but they miss paraphrases. The model without an index answers anyway, which is the failure the comparison is meant to show. The Slack bot uses the indexed path.</p>
+<h2>Table 1. What each approach is allowed to see</h2>
+<table>
+<tr><th>Approach</th><th>Input</th><th>Tokens</th><th>Unsupported answers</th><th>Typical failure</th></tr>
+<tr><td>Rules-based search</td><td>Title phrase rules only</td><td>0</td><td>Low, because it quotes or abstains</td><td>Misses a paraphrase, or ties and abstains</td></tr>
+<tr><td>LLM, no vector index</td><td>Question only</td><td>Prompt plus completion, no policy text</td><td>High when it invents a rule</td><td>States figures and policy ids the database does not have</td></tr>
+<tr><td>LLM with vector index</td><td>Top TF-IDF excerpts only</td><td>Higher, because excerpts are in the prompt</td><td>Low when it follows the excerpts</td><td>Weak retrieval can still leave it with the wrong excerpt</td></tr>
+</table>
+<h2>Table 2. Four-question check</h2>
+<table>
+<tr><th>Question</th><th>Approach</th><th>Policy</th><th>Time</th><th>Tokens</th><th>Unsupported</th></tr>
+<tr><td>Vacation days</td><td>Rules</td><td>HR-VACATION</td><td>1 ms</td><td>0</td><td>0</td></tr>
+<tr><td>Vacation days</td><td>LLM, no index</td><td>none</td><td>9612 ms</td><td>1199</td><td>25</td></tr>
+<tr><td>Vacation days</td><td>LLM with index</td><td>HR-VACATION</td><td>2667 ms</td><td>883</td><td>0</td></tr>
+<tr><td>Remote days</td><td>Rules</td><td>REM-REMOTE-WORK</td><td>1 ms</td><td>0</td><td>0</td></tr>
+<tr><td>Remote days</td><td>LLM, no index</td><td>none</td><td>4401 ms</td><td>1004</td><td>0, abstained</td></tr>
+<tr><td>Remote days</td><td>LLM with index</td><td>REM-REMOTE-WORK</td><td>2472 ms</td><td>916</td><td>0</td></tr>
+<tr><td>Expenses over $500</td><td>Rules</td><td>FIN-EXPENSE-APPROVAL</td><td>1 ms</td><td>0</td><td>0</td></tr>
+<tr><td>Expenses over $500</td><td>LLM, no index</td><td>none</td><td>4828 ms</td><td>919</td><td>45</td></tr>
+<tr><td>Expenses over $500</td><td>LLM with index</td><td>FIN-EXPENSE-APPROVAL</td><td>3462 ms</td><td>943</td><td>0</td></tr>
+<tr><td>Pension percentage</td><td>Rules</td><td>none</td><td>1 ms</td><td>0</td><td>0, abstained</td></tr>
+<tr><td>Pension percentage</td><td>LLM, no index</td><td>none</td><td>6958 ms</td><td>1154</td><td>57</td></tr>
+<tr><td>Pension percentage</td><td>LLM with index</td><td>none</td><td>2519 ms</td><td>827</td><td>0, abstained</td></tr>
+</table>
+</main>
+<script>
+const recorded={
+"how many vacation days do employees get, and can unused days roll over?":[["Rules-based search","Vacation Policy (HR-VACATION): Employees receive 15 vacation days per year. Unused days may roll over.","HR-VACATION","1 ms","0","0"],["LLM without a vector index","Full-time employees receive 15 paid vacation days per year. Up to 5 unused days may roll over; any excess is forfeited.","none","9612 ms","1199","25"],["LLM with a vector index","Employees receive 15 vacation days per year. Unused days may roll over.","HR-VACATION","2667 ms","883","0"]],
+"how many days a week can i work remotely?":[["Rules-based search","Remote Work Policy (REM-REMOTE-WORK): Employees may work remotely up to three days per week with manager approval.","REM-REMOTE-WORK","1 ms","0","0"],["LLM without a vector index","Abstained. The model had no policy text and did not state a number.","none","4401 ms","1004","0"],["LLM with a vector index","Employees may work remotely up to three days per week with manager approval.","REM-REMOTE-WORK","2472 ms","916","0"]],
+"do expenses over $500 need approval, and from whom?":[["Rules-based search","Expense Approval Policy (FIN-EXPENSE-APPROVAL): All expenses over $500 require prior approval from Finance.","FIN-EXPENSE-APPROVAL","1 ms","0","0"],["LLM without a vector index","Invented a manager sign-off. The policy says Finance.","none","4828 ms","919","45"],["LLM with a vector index","All expenses over $500 require prior approval from Finance.","FIN-EXPENSE-APPROVAL","3462 ms","943","0"]],
+"what percentage of salary does the company contribute to my pension?":[["Rules-based search","No rule matched. The database has no pension policy.","none","1 ms","0","0"],["LLM without a vector index","Invented a 5 percent contribution under a Retirement Benefits Policy that is not in the database.","none","6958 ms","1154","57"],["LLM with a vector index","The policy database does not contain this.","none","2519 ms","827","0"]]
+};
+document.getElementById("go").onclick=()=>{const q=document.getElementById("q").value.trim().toLowerCase();const rows=recorded[q];const out=document.getElementById("out");if(!rows){out.innerHTML="<p>Use one of the four recorded questions: vacation days, remote days, expenses over $500, or pension percentage.</p>";return;}out.innerHTML=rows.map(r=>`<article class=\"card\"><h2>${r[0]}</h2><p>Policy: ${r[2]}</p><p>${r[1]}</p><p>Time ${r[3]} · Tokens ${r[4]} · Unsupported ${r[5]}</p></article>`).join("");};
+</script>
+</body>
+</html>
