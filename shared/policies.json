@@ -1,0 +1,688 @@
+[
+  {
+    "id": "HR-PERFORMANCE-REVIEW",
+    "title": "Performance Review Policy",
+    "department": "Sales",
+    "category": "Human Resources",
+    "text": "Employees receive formal performance reviews annually."
+  },
+  {
+    "id": "WP-DRESS-CODE",
+    "title": "Dress Code Policy",
+    "department": "Facilities",
+    "category": "Workplace",
+    "text": "Employees are expected to dress in business casual attire."
+  },
+  {
+    "id": "CS-WARRANTY",
+    "title": "Warranty Policy",
+    "department": "Sales",
+    "category": "Customer Service",
+    "text": "Products are covered under warranty for one year."
+  },
+  {
+    "id": "CS-ACCOUNT-MANAGEMENT",
+    "title": "Account Management Policy",
+    "department": "Sales",
+    "category": "Customer Service",
+    "text": "Accounts must be reviewed quarterly."
+  },
+  {
+    "id": "CMP-ANTI-HARASSMENT",
+    "title": "Anti-Harassment Policy",
+    "department": "Marketing",
+    "category": "Compliance",
+    "text": "Harassment of any kind is not tolerated."
+  },
+  {
+    "id": "HR-RECOGNITION-PROGRAM",
+    "title": "Recognition Program Policy",
+    "department": "Facilities",
+    "category": "Human Resources",
+    "text": "Employees may nominate peers for recognition awards."
+  },
+  {
+    "id": "IT-SOFTWARE-INSTALLATION",
+    "title": "Software Installation Policy",
+    "department": "Sales",
+    "category": "IT & Security",
+    "text": "Only approved software may be installed on company devices."
+  },
+  {
+    "id": "HR-WORKPLACE-ACCOMMODATION",
+    "title": "Workplace Accommodation Policy",
+    "department": "Finance",
+    "category": "Human Resources",
+    "text": "Employees may request reasonable accommodations."
+  },
+  {
+    "id": "CMP-DATA-PRIVACY",
+    "title": "Data Privacy Policy",
+    "department": "Operations",
+    "category": "Compliance",
+    "text": "Employees must protect customer data and follow privacy regulations."
+  },
+  {
+    "id": "REM-WORK-FROM-ABROAD",
+    "title": "Work From Abroad Policy",
+    "department": "Facilities",
+    "category": "Remote Work",
+    "text": "Employees may work abroad for up to 30 days with approval."
+  },
+  {
+    "id": "OPS-FILE-NAMING",
+    "title": "File Naming Policy",
+    "department": "Marketing",
+    "category": "Operations",
+    "text": "Files must follow naming conventions for easy retrieval."
+  },
+  {
+    "id": "OPS-COMPANY-VEHICLE",
+    "title": "Company Vehicle Policy",
+    "department": "Legal",
+    "category": "Operations",
+    "text": "Use of company vehicles must be logged and approved."
+  },
+  {
+    "id": "HR-ONBOARDING",
+    "title": "Onboarding Policy",
+    "department": "Sales",
+    "category": "Human Resources",
+    "text": "New hires must complete onboarding within their first week."
+  },
+  {
+    "id": "CMP-LEGAL-HOLD",
+    "title": "Legal Hold Policy",
+    "department": "IT",
+    "category": "Compliance",
+    "text": "Legal holds must be applied to relevant documents."
+  },
+  {
+    "id": "FIN-BUDGET-PLANNING",
+    "title": "Budget Planning Policy",
+    "department": "HR",
+    "category": "Finance & Expense",
+    "text": "Departments must submit budgets by Q4."
+  },
+  {
+    "id": "HR-HOLIDAY-SCHEDULE",
+    "title": "Holiday Schedule Policy",
+    "department": "Facilities",
+    "category": "Human Resources",
+    "text": "Company holidays are published annually and observed accordingly."
+  },
+  {
+    "id": "IT-SUPPORT-TICKET",
+    "title": "Support Ticket Policy",
+    "department": "Operations",
+    "category": "IT & Security",
+    "text": "Support tickets must be resolved within SLA."
+  },
+  {
+    "id": "OPS-SUPPLIER-EVALUATION",
+    "title": "Supplier Evaluation Policy",
+    "department": "Facilities",
+    "category": "Operations",
+    "text": "Suppliers must be evaluated annually."
+  },
+  {
+    "id": "WP-PARKING",
+    "title": "Parking Policy",
+    "department": "HR",
+    "category": "Workplace",
+    "text": "Parking spaces are assigned and must be used accordingly."
+  },
+  {
+    "id": "CMP-EQUAL-OPPORTUNITY",
+    "title": "Equal Opportunity Policy",
+    "department": "HR",
+    "category": "Compliance",
+    "text": "The company is committed to equal opportunity employment."
+  },
+  {
+    "id": "CS-CUSTOMER-INTERACTION",
+    "title": "Customer Interaction Policy",
+    "department": "Operations",
+    "category": "Customer Service",
+    "text": "Employees must maintain professionalism in all customer interactions."
+  },
+  {
+    "id": "CS-CUSTOMER-FEEDBACK",
+    "title": "Customer Feedback Policy",
+    "department": "Operations",
+    "category": "Customer Service",
+    "text": "Customer feedback must be logged and reviewed."
+  },
+  {
+    "id": "OPS-MARKETING-APPROVAL",
+    "title": "Marketing Approval Policy",
+    "department": "Operations",
+    "category": "Operations",
+    "text": "Marketing materials must be approved before release."
+  },
+  {
+    "id": "REM-REMOTE-WORK",
+    "title": "Remote Work Policy",
+    "department": "Facilities",
+    "category": "Remote Work",
+    "text": "Employees may work remotely up to three days per week with manager approval."
+  },
+  {
+    "id": "CMP-CODE-OF-CONDUCT",
+    "title": "Code of Conduct",
+    "department": "Legal",
+    "category": "Compliance",
+    "text": "All employees must adhere to professional behavior standards."
+  },
+  {
+    "id": "WP-MEETING-ROOM-BOOKING",
+    "title": "Meeting Room Booking Policy",
+    "department": "Sales",
+    "category": "Workplace",
+    "text": "Meeting rooms must be booked in advance using the portal."
+  },
+  {
+    "id": "OPS-INTERNAL-COMMUNICATION",
+    "title": "Internal Communication Policy",
+    "department": "IT",
+    "category": "Operations",
+    "text": "Use company channels for internal communication."
+  },
+  {
+    "id": "IT-MOBILE-DEVICE",
+    "title": "Mobile Device Policy",
+    "department": "IT",
+    "category": "IT & Security",
+    "text": "Employees may request company-issued mobile devices for work."
+  },
+  {
+    "id": "FIN-TRAINING-REIMBURSEMENT",
+    "title": "Training Reimbursement Policy",
+    "department": "Sales",
+    "category": "Finance & Expense",
+    "text": "Employees may be reimbursed for approved external training."
+  },
+  {
+    "id": "CMP-CLIENT-GIFT",
+    "title": "Client Gift Policy",
+    "department": "HR",
+    "category": "Compliance",
+    "text": "Client gifts must comply with company guidelines."
+  },
+  {
+    "id": "OPS-CAMPAIGN-REVIEW",
+    "title": "Campaign Review Policy",
+    "department": "HR",
+    "category": "Operations",
+    "text": "Marketing campaigns must be reviewed quarterly."
+  },
+  {
+    "id": "HR-EMPLOYEE-REFERRAL",
+    "title": "Employee Referral Policy",
+    "department": "Finance",
+    "category": "Human Resources",
+    "text": "Employees may refer candidates for open positions."
+  },
+  {
+    "id": "HR-OFFER-LETTER",
+    "title": "Offer Letter Policy",
+    "department": "Marketing",
+    "category": "Human Resources",
+    "text": "Offer letters must follow approved templates."
+  },
+  {
+    "id": "HR-WORK-ANNIVERSARY-RECOGNITION",
+    "title": "Work Anniversary Recognition Policy",
+    "department": "Marketing",
+    "category": "Human Resources",
+    "text": "Employees are recognized on their work anniversaries."
+  },
+  {
+    "id": "CMP-CONFLICT-OF-INTEREST",
+    "title": "Conflict of Interest Policy",
+    "department": "Marketing",
+    "category": "Compliance",
+    "text": "Employees must disclose any potential conflicts of interest."
+  },
+  {
+    "id": "OPS-BUSINESS-CONTINUITY",
+    "title": "Business Continuity Policy",
+    "department": "HR",
+    "category": "Operations",
+    "text": "Departments must maintain business continuity plans."
+  },
+  {
+    "id": "IT-SYSTEM-DOWNTIME",
+    "title": "System Downtime Policy",
+    "department": "Operations",
+    "category": "IT & Security",
+    "text": "Planned downtimes are communicated in advance."
+  },
+  {
+    "id": "IT-HARDWARE-UPGRADE",
+    "title": "Hardware Upgrade Policy",
+    "department": "IT",
+    "category": "IT & Security",
+    "text": "Hardware upgrades must be requested through IT."
+  },
+  {
+    "id": "HR-EXIT-INTERVIEW",
+    "title": "Exit Interview Policy",
+    "department": "Facilities",
+    "category": "Human Resources",
+    "text": "Departing employees are encouraged to participate in an exit interview."
+  },
+  {
+    "id": "IT-SECURITY-INCIDENT",
+    "title": "Security Incident Policy",
+    "department": "IT",
+    "category": "IT & Security",
+    "text": "Security incidents must be reported immediately."
+  },
+  {
+    "id": "HR-PROMOTION",
+    "title": "Promotion Policy",
+    "department": "Finance",
+    "category": "Human Resources",
+    "text": "Promotions are based on performance and business needs."
+  },
+  {
+    "id": "FIN-SALES-INCENTIVE",
+    "title": "Sales Incentive Policy",
+    "department": "Marketing",
+    "category": "Finance & Expense",
+    "text": "Sales incentives must be documented and approved."
+  },
+  {
+    "id": "HR-PROBATION-PERIOD",
+    "title": "Probation Period Policy",
+    "department": "Facilities",
+    "category": "Human Resources",
+    "text": "New hires are subject to a 90-day probation period."
+  },
+  {
+    "id": "HR-MENTORSHIP-PROGRAM",
+    "title": "Mentorship Program Policy",
+    "department": "HR",
+    "category": "Human Resources",
+    "text": "Employees may participate in the mentorship program."
+  },
+  {
+    "id": "CMP-PUBLIC-SPEAKING",
+    "title": "Public Speaking Policy",
+    "department": "Legal",
+    "category": "Compliance",
+    "text": "Employees must get approval before public speaking engagements."
+  },
+  {
+    "id": "OPS-SUSTAINABILITY",
+    "title": "Sustainability Policy",
+    "department": "Finance",
+    "category": "Operations",
+    "text": "Departments should consider sustainability in operations."
+  },
+  {
+    "id": "REM-REMOTE-ACCESS",
+    "title": "Remote Access Policy",
+    "department": "Legal",
+    "category": "Remote Work",
+    "text": "Remote access must use secure VPN connections."
+  },
+  {
+    "id": "IT-INCIDENT-RESPONSE",
+    "title": "Incident Response Policy",
+    "department": "Legal",
+    "category": "IT & Security",
+    "text": "Incident response procedures must be followed during disruptions."
+  },
+  {
+    "id": "OPS-INVENTORY-MANAGEMENT",
+    "title": "Inventory Management Policy",
+    "department": "Sales",
+    "category": "Operations",
+    "text": "Inventory must be tracked and reconciled monthly."
+  },
+  {
+    "id": "IT-ASSET-DISPOSAL",
+    "title": "Asset Disposal Policy",
+    "department": "Sales",
+    "category": "IT & Security",
+    "text": "IT assets must be disposed of securely."
+  },
+  {
+    "id": "IT-OFFICE-ACCESS",
+    "title": "Office Access Policy",
+    "department": "HR",
+    "category": "IT & Security",
+    "text": "Access badges must be worn and not shared."
+  },
+  {
+    "id": "CS-PRODUCT-RETURN",
+    "title": "Product Return Policy",
+    "department": "Marketing",
+    "category": "Customer Service",
+    "text": "Returns must follow the documented return process."
+  },
+  {
+    "id": "OPS-EMAIL-SIGNATURE",
+    "title": "Email Signature Policy",
+    "department": "HR",
+    "category": "Operations",
+    "text": "All employees must use the approved email signature format."
+  },
+  {
+    "id": "IT-CLOUD-STORAGE",
+    "title": "Cloud Storage Policy",
+    "department": "Operations",
+    "category": "IT & Security",
+    "text": "Use approved cloud storage for company documents."
+  },
+  {
+    "id": "OPS-SHIPPING",
+    "title": "Shipping Policy",
+    "department": "HR",
+    "category": "Operations",
+    "text": "Shipping must use approved carriers."
+  },
+  {
+    "id": "CMP-SOCIAL-MEDIA",
+    "title": "Social Media Policy",
+    "department": "Finance",
+    "category": "Compliance",
+    "text": "Employees must not disclose confidential information on social media."
+  },
+  {
+    "id": "REM-REMOTE-MEETING",
+    "title": "Remote Meeting Policy",
+    "department": "Operations",
+    "category": "Remote Work",
+    "text": "Remote meetings should use approved video conferencing tools."
+  },
+  {
+    "id": "HR-INTERVIEW-PANEL",
+    "title": "Interview Panel Policy",
+    "department": "HR",
+    "category": "Human Resources",
+    "text": "Interview panels must include diverse representation."
+  },
+  {
+    "id": "FIN-EXPENSE-APPROVAL",
+    "title": "Expense Approval Policy",
+    "department": "Legal",
+    "category": "Finance & Expense",
+    "text": "All expenses over $500 require prior approval from Finance."
+  },
+  {
+    "id": "CS-CUSTOMER-ONBOARDING",
+    "title": "Customer Onboarding Policy",
+    "department": "HR",
+    "category": "Customer Service",
+    "text": "New customers must complete onboarding steps."
+  },
+  {
+    "id": "CMP-DOCUMENT-RETENTION",
+    "title": "Document Retention Policy",
+    "department": "Legal",
+    "category": "Compliance",
+    "text": "Documents must be retained according to legal requirements."
+  },
+  {
+    "id": "IT-CYBERSECURITY-AWARENESS",
+    "title": "Cybersecurity Awareness Policy",
+    "department": "Marketing",
+    "category": "IT & Security",
+    "text": "Employees must complete annual cybersecurity training."
+  },
+  {
+    "id": "FIN-CORPORATE-CARD",
+    "title": "Corporate Card Policy",
+    "department": "Operations",
+    "category": "Finance & Expense",
+    "text": "Corporate card usage must comply with expense guidelines."
+  },
+  {
+    "id": "REM-FLEXIBLE-HOURS",
+    "title": "Flexible Hours Policy",
+    "department": "HR",
+    "category": "Remote Work",
+    "text": "Employees may adjust work hours with manager approval."
+  },
+  {
+    "id": "HR-SICK-LEAVE",
+    "title": "Sick Leave Policy",
+    "department": "Sales",
+    "category": "Human Resources",
+    "text": "Employees accrue sick leave monthly for personal or family illness."
+  },
+  {
+    "id": "OPS-CONTENT-PUBLISHING",
+    "title": "Content Publishing Policy",
+    "department": "Marketing",
+    "category": "Operations",
+    "text": "Content must be reviewed before publishing."
+  },
+  {
+    "id": "REM-HOME-OFFICE-EQUIPMENT",
+    "title": "Home Office Equipment Policy",
+    "department": "Legal",
+    "category": "Remote Work",
+    "text": "Employees may request ergonomic equipment for remote work."
+  },
+  {
+    "id": "IT-LAPTOP-USAGE",
+    "title": "Laptop Usage Policy",
+    "department": "IT",
+    "category": "IT & Security",
+    "text": "Company laptops must be used for business purposes only."
+  },
+  {
+    "id": "FIN-PROCUREMENT",
+    "title": "Procurement Policy",
+    "department": "Marketing",
+    "category": "Finance & Expense",
+    "text": "All purchases must follow the procurement process."
+  },
+  {
+    "id": "HR-BEREAVEMENT-LEAVE",
+    "title": "Bereavement Leave Policy",
+    "department": "Legal",
+    "category": "Human Resources",
+    "text": "Employees may take up to 5 days of bereavement leave."
+  },
+  {
+    "id": "IT-DISASTER-RECOVERY",
+    "title": "Disaster Recovery Policy",
+    "department": "Facilities",
+    "category": "IT & Security",
+    "text": "IT must maintain disaster recovery protocols."
+  },
+  {
+    "id": "FIN-PETTY-CASH",
+    "title": "Petty Cash Policy",
+    "department": "Legal",
+    "category": "Finance & Expense",
+    "text": "Petty cash usage must be documented and reconciled monthly."
+  },
+  {
+    "id": "OPS-BRAND-GUIDELINES",
+    "title": "Brand Guidelines Policy",
+    "department": "Facilities",
+    "category": "Operations",
+    "text": "All materials must follow brand guidelines."
+  },
+  {
+    "id": "CMP-CONTRACT-REVIEW",
+    "title": "Contract Review Policy",
+    "department": "Finance",
+    "category": "Compliance",
+    "text": "Contracts must be reviewed by Legal before signing."
+  },
+  {
+    "id": "HR-PARENTAL-LEAVE",
+    "title": "Parental Leave Policy",
+    "department": "Marketing",
+    "category": "Human Resources",
+    "text": "Eligible employees may take up to 12 weeks of paid parental leave."
+  },
+  {
+    "id": "HR-BACKGROUND-CHECK",
+    "title": "Background Check Policy",
+    "department": "Sales",
+    "category": "Human Resources",
+    "text": "All new hires must pass background checks."
+  },
+  {
+    "id": "FIN-TUITION-ASSISTANCE",
+    "title": "Tuition Assistance Policy",
+    "department": "HR",
+    "category": "Finance & Expense",
+    "text": "Employees may apply for tuition assistance for approved programs."
+  },
+  {
+    "id": "IT-INTERNET-USAGE",
+    "title": "Internet Usage Policy",
+    "department": "Finance",
+    "category": "IT & Security",
+    "text": "Company internet should be used for work-related activities only."
+  },
+  {
+    "id": "CMP-WHISTLEBLOWER",
+    "title": "Whistleblower Policy",
+    "department": "HR",
+    "category": "Compliance",
+    "text": "Employees may report unethical behavior anonymously."
+  },
+  {
+    "id": "HR-EXIT-CLEARANCE",
+    "title": "Exit Clearance Policy",
+    "department": "Sales",
+    "category": "Human Resources",
+    "text": "Departing employees must complete exit clearance."
+  },
+  {
+    "id": "OPS-VENDOR-MANAGEMENT",
+    "title": "Vendor Management Policy",
+    "department": "Marketing",
+    "category": "Operations",
+    "text": "Vendors must be approved and reviewed annually."
+  },
+  {
+    "id": "OPS-QUALITY-ASSURANCE",
+    "title": "Quality Assurance Policy",
+    "department": "HR",
+    "category": "Operations",
+    "text": "Products must pass quality checks before release."
+  },
+  {
+    "id": "FIN-CONFERENCE-ATTENDANCE",
+    "title": "Conference Attendance Policy",
+    "department": "Operations",
+    "category": "Finance & Expense",
+    "text": "Employees may attend conferences with prior approval."
+  },
+  {
+    "id": "CMP-MEDIA-CONTACT",
+    "title": "Media Contact Policy",
+    "department": "Finance",
+    "category": "Compliance",
+    "text": "Only authorized employees may speak to the media."
+  },
+  {
+    "id": "CMP-DIVERSITY-AND-INCLUSION",
+    "title": "Diversity and Inclusion Policy",
+    "department": "Operations",
+    "category": "Compliance",
+    "text": "The company promotes a diverse and inclusive workplace."
+  },
+  {
+    "id": "WP-WORKPLACE-SAFETY",
+    "title": "Workplace Safety Policy",
+    "department": "HR",
+    "category": "Workplace",
+    "text": "Employees must follow safety procedures and report hazards."
+  },
+  {
+    "id": "WP-WORKPLACE-CLEANLINESS",
+    "title": "Workplace Cleanliness Policy",
+    "department": "Sales",
+    "category": "Workplace",
+    "text": "Employees are responsible for maintaining clean workspaces."
+  },
+  {
+    "id": "IT-HELPDESK-TICKET",
+    "title": "Helpdesk Ticket Policy",
+    "department": "Operations",
+    "category": "IT & Security",
+    "text": "All IT issues must be submitted via helpdesk ticket."
+  },
+  {
+    "id": "WP-MEETING-ETIQUETTE",
+    "title": "Meeting Etiquette Policy",
+    "department": "Facilities",
+    "category": "Workplace",
+    "text": "Meetings should start on time and follow an agenda."
+  },
+  {
+    "id": "CS-LEAD-MANAGEMENT",
+    "title": "Lead Management Policy",
+    "department": "Finance",
+    "category": "Customer Service",
+    "text": "Sales leads must be tracked in the CRM."
+  },
+  {
+    "id": "IT-IT-ASSET-MANAGEMENT",
+    "title": "IT Asset Management Policy",
+    "department": "Facilities",
+    "category": "IT & Security",
+    "text": "All IT assets must be tracked and returned upon exit."
+  },
+  {
+    "id": "IT-PASSWORD",
+    "title": "Password Policy",
+    "department": "HR",
+    "category": "IT & Security",
+    "text": "Passwords must be changed every 90 days and meet complexity requirements."
+  },
+  {
+    "id": "FIN-TRAVEL-REIMBURSEMENT",
+    "title": "Travel Reimbursement Policy",
+    "department": "Facilities",
+    "category": "Finance & Expense",
+    "text": "Employees must submit receipts for travel expenses within 30 days."
+  },
+  {
+    "id": "CMP-PRESS-RELEASE",
+    "title": "Press Release Policy",
+    "department": "Legal",
+    "category": "Compliance",
+    "text": "Press releases must be approved by Marketing and Legal."
+  },
+  {
+    "id": "HR-VACATION",
+    "title": "Vacation Policy",
+    "department": "IT",
+    "category": "Human Resources",
+    "text": "Employees receive 15 vacation days per year. Unused days may roll over."
+  },
+  {
+    "id": "CS-ESCALATION",
+    "title": "Escalation Policy",
+    "department": "Facilities",
+    "category": "Customer Service",
+    "text": "Customer issues must follow the escalation process."
+  },
+  {
+    "id": "HR-JOB-POSTING",
+    "title": "Job Posting Policy",
+    "department": "Legal",
+    "category": "Human Resources",
+    "text": "All internal job postings are listed on the company portal."
+  },
+  {
+    "id": "OPS-COMPANY-PROPERTY",
+    "title": "Company Property Policy",
+    "department": "Facilities",
+    "category": "Operations",
+    "text": "Employees must return company property upon exit."
+  }
+]
